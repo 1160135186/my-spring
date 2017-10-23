@@ -1,0 +1,10 @@
+<beans>
+    <bean>
+        <class-name>Phone</class-name>
+        <class-path>com.beans.Phone</class-path>
+    </bean>
+    <bean>
+        <class-name>Student</class-name>
+        <class-path>com.beans.Student</class-path>
+    </bean>
+</beans>

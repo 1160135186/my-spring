@@ -1,0 +1,26 @@
+<!--
+     create a xml file like spring-config.xml,the following i will list the tags in spring-config.xml
+     and describe the meaning of them
+     1. main property in bean tag
+        <bean id="" class="" name="" scope="" lazy-init="" init-method=""></bean>
+        id : the symbol of bean and using id to get bean;
+        class : the quantified name  of bean which is necessary
+        name  : other kind of symbol of bean ,but a bean can have many names but only unique id;
+        scope : the instant method of bean, the default value is singleton,also you can set it as prototype
+        lazy-init : default value is false ,which means when spring bean factory start , the class is instanced
+                    but you can set it as true to instance it when first invoke getBean method
+        init-method: decide which construct method to invoke
+
+     2. the sub tags in bean tag
+        <property name="" ref="" value=""></property>  init the member of bean, including object and primitive-type members
+        <constructor-arg index="" value=""></constructor-arg>  if use a constructor with parameters, then can set the value
+
+-->
+
+    <beans>
+        <bean id = "first" class="com.Injection.BaseObjectImplFirst"></bean>
+        <bean id = "second" class="com.Injection.BaseObjectImplSecond"></bean>
+        <bean id="InjectedObject" class="com.Injection.InjectedObject">
+             <property name = "iBaseObject" ref = "second"></property>
+        </bean>
+    </beans>
